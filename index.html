@@ -3,36 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohan Sir Portfolio</title>
-    <meta name="description" content="Professional portfolio of Mohan Sir, a Mathematics, Science and English teacher from Itahari, Nepal.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Mohan Sir | Teacher Portfolio</title>
+
+    <meta name="description"
+          content="Mohan Sir - Experienced secondary teacher specializing in Mathematics, Science and English.">
+
     <style>
-        :root {
-            --bg-1: #0f172a;
-            --bg-2: #111827;
-            --panel: rgba(15, 23, 42, 0.76);
-            --panel-soft: rgba(255,255,255,0.06);
-            --card: #f8fafc;
-            --card-2: #ecfeff;
-            --text: #e2e8f0;
-            --muted: #a5b4cf;
-            --primary: #2dd4bf;
-            --primary-2: #38bdf8;
-            --secondary: #f59e0b;
-            --accent: #fb7185;
-            --line: rgba(148, 163, 184, 0.25);
-            --shadow: rgba(2, 6, 23, 0.3);
+        /* =========================
+           GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
-        * { box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
         body {
-            margin: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #111827 35%, #082f49 100%);
-            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            background: #f5f7fb;
+            color: #263238;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         img {
@@ -40,718 +37,1369 @@
             display: block;
         }
 
-        a {
-            color: #7dd3fc;
-            text-decoration: none;
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
+
+        /* =========================
+           NAVIGATION
+        ========================== */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.82);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         }
 
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 14px 20px;
+        .nav-container {
+            min-height: 70px;
             display: flex;
-            justify-content: center;
-            gap: 18px;
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
 
-        .nav-inner a {
-            color: #e2e8f0;
-            font-size: 0.92rem;
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #163b65;
+        }
+
+        .logo span {
+            color: #e67e22;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: #263238;
             font-weight: 600;
-            transition: color 0.2s ease;
+            transition: 0.3s;
         }
 
-        .nav-inner a:hover {
-            color: var(--primary);
-            text-decoration: none;
+        .nav-links a:hover {
+            color: #e67e22;
         }
+
+
+        /* =========================
+           HERO
+        ========================== */
 
         .hero {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px 40px;
-        }
-
-        .hero-card {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(8, 47, 73, 0.9));
-            border: 1px solid var(--line);
-            border-radius: 28px;
-            box-shadow: 0 25px 60px var(--shadow);
-            overflow: hidden;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            min-height: 90vh;
+            display: flex;
             align-items: center;
+            background: linear-gradient(135deg, #163b65, #246b9b);
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            top: -120px;
+            right: -100px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            bottom: -100px;
+            left: -80px;
         }
 
         .hero-content {
-            padding: 48px 42px;
-        }
-
-        .eyebrow {
-            display: inline-block;
-            padding: 8px 14px;
-            border-radius: 999px;
-            background: rgba(45, 212, 191, 0.12);
-            border: 1px solid rgba(45, 212, 191, 0.22);
-            color: var(--primary);
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            font-size: 11px;
-        }
-
-        h1 {
-            margin: 18px 0 14px;
-            font-size: clamp(2.6rem, 5vw, 4.5rem);
-            line-height: 1.06;
-            letter-spacing: -0.04em;
-            color: #f8fafc;
-        }
-
-        .gradient-text {
-            background: linear-gradient(90deg, #67e8f9, #2dd4bf, #fbbf24);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero-sub {
-            font-size: 1.08rem;
-            color: var(--muted);
-            max-width: 620px;
-            line-height: 1.7;
-            margin: 0 0 26px;
-        }
-
-        .cta-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-bottom: 28px;
-        }
-
-        .cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 999px;
-            padding: 14px 22px;
-            font-weight: 700;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .cta:hover {
-            text-decoration: none;
-            transform: translateY(-2px);
-        }
-
-        .cta.primary {
-            background: linear-gradient(90deg, var(--primary), var(--primary-2));
-            color: #06212d;
-            box-shadow: 0 18px 28px rgba(45, 212, 191, 0.22);
-        }
-
-        .cta.secondary {
-            background: linear-gradient(90deg, #22c55e, #16a34a);
-            color: white;
-            box-shadow: 0 18px 28px rgba(34, 197, 94, 0.2);
-        }
-
-        .hero-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-        }
-
-        .meta-item {
-            min-width: 140px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 12px 14px;
-        }
-
-        .meta-label {
-            color: var(--muted);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .meta-value {
-            margin-top: 6px;
-            font-weight: 700;
-            color: #f8fafc;
-        }
-
-        .hero-visual {
             position: relative;
-            min-height: 100%;
-            background: radial-gradient(circle at top right, rgba(45, 212, 191, 0.18), transparent 35%), linear-gradient(180deg, rgba(15,23,42,0.2), rgba(15,23,42,0.6));
-            padding: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .photo-frame {
-            width: min(100%, 420px);
-            border-radius: 28px;
-            padding: 14px;
-            background: linear-gradient(135deg, rgba(45,212,191,0.25), rgba(56,189,248,0.1));
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 20px 40px rgba(2, 6, 23, 0.35);
-        }
-
-        .profile-photo {
+            z-index: 2;
+            text-align: center;
             width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 22px;
-            border: 2px solid rgba(255,255,255,0.12);
-            background: #dbeafe;
         }
 
-        .section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 28px 20px;
-        }
-
-        .section-panel {
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid var(--line);
-            border-radius: 24px;
-            box-shadow: 0 16px 32px rgba(2, 6, 23, 0.2);
-            padding: 28px 30px;
-        }
-
-        .section-heading {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 30px;
             margin-bottom: 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #ffd166;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 3vw, 30px);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 850px;
+            margin: auto;
+            font-size: 17px;
+            opacity: 0.94;
+        }
+
+
+        /* =========================
+           SCROLLING TEXT
+        ========================== */
+
+        .scrolling-wrapper {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 35px;
+            padding: 15px 0;
+            background: rgba(255,255,255,0.10);
+            border-top: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .scrolling-track {
+            display: flex;
+            width: max-content;
+            animation: scrollText 32s linear infinite;
+        }
+
+        .scrolling-track span {
+            font-size: 18px;
+            font-weight: 600;
+            white-space: nowrap;
+            padding-right: 100px;
+        }
+
+        @keyframes scrollText {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
             flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #ffd166;
+            color: #17324d;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #163b65;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        section {
+            padding: 80px 0;
         }
 
         .section-title {
-            margin: 0;
-            font-size: clamp(1.7rem, 3vw, 2.5rem);
-            color: #f8fafc;
+            text-align: center;
+            margin-bottom: 45px;
         }
 
-        .section-kicker {
-            font-size: 0.76rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--primary);
+        .section-title h2 {
+            font-size: 36px;
+            color: #163b65;
+            margin-bottom: 10px;
         }
 
-        .content-grid {
+        .section-title p {
+            color: #607d8b;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 22px;
+            grid-template-columns: 0.9fr 1.5fr;
+            gap: 45px;
+            align-items: center;
         }
 
-        .info-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 22px;
+        .profile-card {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.10);
         }
 
-        .info-card h3 {
-            margin-top: 0;
-            color: #f8fafc;
-            font-size: 1.1rem;
-        }
-
-        .info-card p,
-        .info-card li {
-            color: var(--muted);
-            line-height: 1.8;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        table {
+        .profile-card img {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 8px;
-            background: rgba(15, 23, 42, 0.25);
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        th, td {
-            border: 1px solid var(--line);
-            padding: 12px 14px;
-            text-align: left;
-            color: var(--text);
-        }
-
-        th {
-            background: rgba(45, 212, 191, 0.1);
-            color: var(--primary);
-        }
-
-        .stat-list {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .stat-box {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 18px 16px;
-        }
-
-        .stat-box strong {
-            display: block;
-            font-size: 1.6rem;
-            color: #f8fafc;
-            margin-bottom: 8px;
-        }
-
-        .stat-box span {
-            color: var(--muted);
-        }
-
-        .youtube-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(220px, 1fr));
-            gap: 18px;
-            margin-top: 20px;
-        }
-
-        .video-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            overflow: hidden;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .video-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(45, 212, 191, 0.5);
-        }
-
-        .video-card img {
-            width: 100%;
-            height: 190px;
+            max-height: 430px;
             object-fit: cover;
-            background: #172554;
+            border-radius: 15px;
         }
 
-        .video-body {
-            padding: 16px 14px 18px;
+        .about-text h3 {
+            font-size: 30px;
+            color: #163b65;
+            margin-bottom: 15px;
         }
 
-        .video-body h4 {
-            margin: 0 0 10px;
-            color: #f8fafc;
-            font-size: 1.02rem;
+        .about-text p {
+            margin-bottom: 15px;
+            color: #455a64;
         }
 
-        .video-body a {
-            font-weight: 700;
-            color: var(--primary);
+        .highlight {
+            background: #eaf3fb;
+            border-left: 5px solid #e67e22;
+            padding: 18px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================== */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+            border-top: 4px solid #246b9b;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .card-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #163b65;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #546e7a;
+        }
+
+
+        /* =========================
+           SUBJECTS
+        ========================== */
+
+        .subjects {
+            background: #eef4f8;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .subject {
+            background: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 7px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .subject:hover {
+            transform: scale(1.04);
+        }
+
+        .subject-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .subject h3 {
+            color: #163b65;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================== */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline-item {
+            background: white;
+            margin-bottom: 25px;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 7px 22px rgba(0,0,0,0.07);
+            border-left: 5px solid #e67e22;
+        }
+
+        .timeline-item h3 {
+            color: #163b65;
+            margin-bottom: 5px;
+        }
+
+        .timeline-date {
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            font-weight: 600;
+            color: #163b65;
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================== */
+
+        .achievement-list {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .achievement {
+            display: flex;
+            gap: 15px;
+            background: white;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        .achievement-icon {
+            font-size: 25px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: #163b65;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #d6e5ef;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
-        .contact-item {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 18px 20px;
+        .contact-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.10);
+            border-radius: 15px;
         }
 
-        .contact-item strong {
-            display: block;
-            color: var(--primary);
-            margin-bottom: 6px;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            font-size: 0.75rem;
+        .contact-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
         }
 
-        .whatsapp-float {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 62px;
-            height: 62px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #22c55e, #16a34a);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 18px 30px rgba(34, 197, 94, 0.35);
-            z-index: 2000;
+        .contact-card h3 {
+            margin-bottom: 8px;
         }
 
-        .whatsapp-float:hover {
-            text-decoration: none;
-            transform: scale(1.05);
-        }
+
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 24px 20px 60px;
-            color: var(--muted);
+            background: #0e2946;
+            color: white;
             text-align: center;
+            padding: 25px 15px;
         }
 
-        @media (max-width: 900px) {
-            .hero-grid,
-            .content-grid,
-            .contact-grid,
-            .youtube-grid {
+        footer p {
+            margin: 5px 0;
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================== */
+
+        .fade-up {
+            animation: fadeUp 1s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            .nav-container {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .about-grid {
                 grid-template-columns: 1fr;
             }
+
+            .cards,
+            .subject-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                min-height: 85vh;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
         }
 
-        @media (max-width: 640px) {
-            .hero-content {
-                padding: 28px 22px;
+        @media (max-width: 500px) {
+
+            .container {
+                width: 92%;
             }
 
-            .section-panel {
-                padding: 22px 18px;
+            .hero h1 {
+                font-size: 43px;
             }
 
-            .nav-inner {
-                gap: 10px 14px;
+            .hero-subtitle {
+                font-size: 21px;
             }
 
-            .meta-item {
-                min-width: 120px;
+            .scrolling-track span {
+                font-size: 15px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .nav-links {
+                gap: 9px;
             }
         }
+
     </style>
 </head>
+
+
 <body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <nav>
-        <div class="nav-inner">
-            <a href="#profile">Profile</a>
-            <a href="#objective">Objective</a>
-            <a href="#experience">Experience</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#languages">Languages</a>
-            <a href="#strengths">Strengths</a>
-            <a href="#youtube">YouTube</a>
-            <a href="#contact">Contact</a>
+        <div class="container nav-container">
+
+            <div class="logo">
+                Mohan <span>Sir</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#methods">Teaching</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
         </div>
     </nav>
 
-    <header class="hero" id="profile">
-        <div class="hero-card">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <span class="eyebrow">Mathematics • Science • English</span>
-                    <h1>Shaping confident minds with <span class="gradient-text">clear teaching</span>.</h1>
-                    <p class="hero-sub">
-                        Dedicated and experienced secondary teacher with 10 years of teaching practice, helping students build confidence in mathematics, science, and English through simple, practical, and student-friendly learning methods.
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content fade-up">
+
+            <div class="hero-badge">
+                SECONDARY LEVEL TEACHER
+            </div>
+
+            <h1>
+                Welcome to <span>Mohan Sir's</span> Portfolio
+            </h1>
+
+            <div class="hero-subtitle">
+                Shaping confident minds with clear teaching.
+            </div>
+
+            <p class="hero-description">
+                Dedicated and experienced secondary teacher with 10 years
+                of teaching practice, helping students build confidence in
+                Mathematics, Science, and English through simple, practical,
+                and student-friendly learning methods.
+            </p>
+
+
+            <!-- SCROLLING TEXT -->
+
+            <div class="scrolling-wrapper">
+
+                <div class="scrolling-track">
+
+                    <span>
+                        👨‍🏫 Mohan Sir • Shaping confident minds with clear teaching.
+                    </span>
+
+                    <span>
+                        📚 10 Years of Teaching Practice • Mathematics • Science • English
+                    </span>
+
+                    <span>
+                        💡 Simple • Practical • Student-Friendly Learning
+                    </span>
+
+                    <!-- Duplicate for continuous scrolling -->
+
+                    <span>
+                        👨‍🏫 Mohan Sir • Shaping confident minds with clear teaching.
+                    </span>
+
+                    <span>
+                        📚 10 Years of Teaching Practice • Mathematics • Science • English
+                    </span>
+
+                    <span>
+                        💡 Simple • Practical • Student-Friendly Learning
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="btn btn-primary">
+                    Explore My Portfolio
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>About Mohan Sir</h2>
+
+                <p>
+                    A teacher dedicated to meaningful and confident learning.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="profile-card">
+
+                    <!--
+                    If your GitHub image is named Mohan.jpg.jpg,
+                    this will display it.
+                    -->
+
+                    <img src="Mohan.jpg.jpg"
+                         alt="Mohan Sir - Teacher">
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <h3>Teaching with Purpose</h3>
+
+                    <p>
+                        I am Mohan Sir, a dedicated and experienced secondary
+                        level teacher committed to helping students understand
+                        concepts clearly and confidently.
                     </p>
 
-                    <div class="cta-row">
-                        <a class="cta primary" href="https://wa.me/9779842079469" target="_blank" rel="noopener noreferrer">WhatsApp Now</a>
-                        <a class="cta secondary" href="mailto:newitahari@gmail.com">Email Me</a>
+                    <p>
+                        With around 10 years of teaching practice, I focus on
+                        Mathematics, Science, and English and encourage students
+                        to learn through practical examples, discussion,
+                        activities, and real-life situations.
+                    </p>
+
+                    <p>
+                        My goal is not simply to help students remember answers,
+                        but to help them understand ideas, ask questions,
+                        solve problems, and become confident learners.
+                    </p>
+
+                    <div class="highlight">
+
+                        <strong>
+                            My Teaching Philosophy:
+                        </strong>
+
+                        <br>
+
+                        "Every student can learn when teaching is clear,
+                        encouraging, practical, and connected to real life."
+
                     </div>
 
-                    <div class="hero-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Experience</div>
-                            <div class="meta-value">10 Years</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Specialty</div>
-                            <div class="meta-value">Classes 8–10</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Location</div>
-                            <div class="meta-value">Itahari</div>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="hero-visual">
-                    <div class="photo-frame">
-                        <img src="Mohan.jpg" alt="Mohan Sir" class="profile-photo">
-                    </div>
-                </div>
             </div>
+
         </div>
-    </header>
 
-    <main>
-        <section class="section" id="objective">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Career Goal</span>
-                    <h2 class="section-title">Career Objective</h2>
-                </div>
-                <div class="info-card">
-                    <p>To work as a dedicated <strong>Secondary Teacher</strong> in Mathematics, Science, and English, where I can apply my teaching experience, subject knowledge, communication skills, and modern classroom methods to help students achieve academic excellence and personal growth.</p>
-                </div>
-            </div>
-        </section>
+    </section>
 
-        <section class="section" id="experience">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Professional Journey</span>
-                    <h2 class="section-title">Teaching Experience</h2>
-                </div>
 
-                <div class="content-grid">
-                    <div class="info-card">
-                        <h3>Hamro Godawari Boarding School</h3>
-                        <p><strong>Position:</strong> Secondary-Level Teacher</p>
-                        <p><strong>Experience:</strong> 10 years</p>
-                        <p><strong>Subjects:</strong> Mathematics and Science</p>
-                        <p><strong>Classes:</strong> 8, 9 and 10</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>Key Responsibilities</h3>
-                        <ul>
-                            <li>Prepare lesson plans, assignments, and classroom tests</li>
-                            <li>Clarify difficult concepts using simple explanations</li>
-                            <li>Support students with remedial teaching and guidance</li>
-                            <li>Maintain discipline and motivate learners</li>
-                            <li>Prepare students for SEE and competitive examinations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- =========================
+         SUBJECTS
+    ========================== -->
 
-        <section class="section" id="achievements">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Highlights</span>
-                    <h2 class="section-title">Achievements</h2>
-                </div>
-                <div class="stat-list">
-                    <div class="stat-box">
-                        <strong>10+</strong>
-                        <span>Years of teaching</span>
-                    </div>
-                    <div class="stat-box">
-                        <strong>8–10</strong>
-                        <span>Classes taught</span>
-                    </div>
-                    <div class="stat-box">
-                        <strong>SEE</strong>
-                        <span>Exam guidance</span>
-                    </div>
-                    <div class="stat-box">
-                        <strong>100%</strong>
-                        <span>Student-focused teaching</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="subjects">
 
-        <section class="section" id="education">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Academic Background</span>
-                    <h2 class="section-title">Education & Training</h2>
-                </div>
-                <div class="info-card">
-                    <p><strong>Bachelor's Degree:</strong> English and Rural Development, Tribhuvan University</p>
-                    <p><strong>Training:</strong> Basic Computer Application, MS Word, Excel, PowerPoint, Stress Management</p>
-                </div>
-            </div>
-        </section>
+        <div class="container">
 
-        <section class="section" id="skills">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Competencies</span>
-                    <h2 class="section-title">Skills</h2>
-                </div>
-                <div class="content-grid">
-                    <div class="info-card">
-                        <h3>Computer Skills</h3>
-                        <ul>
-                            <li>Microsoft Word, Excel, PowerPoint</li>
-                            <li>Canva</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Internet and digital teaching tools</li>
-                            <li>AI-powered learning support</li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <h3>Teaching Approach</h3>
-                        <ul>
-                            <li>Concept-based learning</li>
-                            <li>Simple, practical explanations</li>
-                            <li>Student motivation and mentoring</li>
-                            <li>Classroom management</li>
-                            <li>Exam preparation and revision strategy</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="section-title">
 
-        <section class="section" id="languages">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Communication</span>
-                    <h2 class="section-title">Language Skills</h2>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Language</th>
-                            <th>Proficiency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Nepali</td><td>Native / Fluent</td></tr>
-                        <tr><td>English</td><td>Professional / Fluent</td></tr>
-                        <tr><td>Hindi</td><td>Conversational / Fluent</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+                <h2>Subjects I Teach</h2>
 
-        <section class="section" id="strengths">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Why Students Learn</span>
-                    <h2 class="section-title">Professional Strengths</h2>
-                </div>
-                <div class="content-grid">
-                    <div class="info-card">
-                        <ul>
-                            <li>Strong communication and classroom engagement</li>
-                            <li>Quick problem-solving and mathematical reasoning</li>
-                            <li>Ability to simplify difficult topics</li>
-                            <li>Positive student mentoring and feedback</li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <ul>
-                            <li>Effective classroom discipline</li>
-                            <li>Result-oriented teaching</li>
-                            <li>Confidence building for students</li>
-                            <li>Focus on conceptual understanding</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="youtube">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Digital Learning</span>
-                    <h2 class="section-title">Teaching Videos</h2>
-                </div>
-                <p style="color: var(--muted); margin-bottom: 20px; line-height: 1.8;">
-                    Explore lesson explanations, concept learning, revision content, and subject guidance through my teaching videos. The official channel is available below and can be updated anytime with new educational videos.
+                <p>
+                    Making difficult concepts simple and understandable.
                 </p>
-                <p><strong>Channel:</strong> <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">@chhatrakhadka2702</a></p>
 
-                <div class="youtube-grid">
-                    <div class="video-card">
-                        <img src="https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg" alt="Mathematics lesson 1">
-                        <div class="video-body">
-                            <h4>Mathematics Lesson 1</h4>
-                            <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">Open Video Channel</a>
-                        </div>
-                    </div>
-                    <div class="video-card">
-                        <img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg" alt="Science lesson 2">
-                        <div class="video-body">
-                            <h4>Science Explanation</h4>
-                            <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">Open Video Channel</a>
-                        </div>
-                    </div>
-                    <div class="video-card">
-                        <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="Exam preparation tips">
-                        <div class="video-body">
-                            <h4>Exam Preparation Tips</h4>
-                            <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">Open Video Channel</a>
-                        </div>
-                    </div>
-                </div>
-                <p style="color: var(--muted); margin-top: 16px; font-style: italic;">Replace VIDEO_ID_1, VIDEO_ID_2, and VIDEO_ID_3 with actual YouTube IDs when you add each lesson manually.</p>
             </div>
-        </section>
 
-        <section class="section" id="contact">
-            <div class="section-panel">
-                <div class="section-heading">
-                    <span class="section-kicker">Contact</span>
-                    <h2 class="section-title">Get in Touch</h2>
+
+            <div class="subject-grid">
+
+                <div class="subject">
+
+                    <div class="subject-icon">🔢</div>
+
+                    <h3>Mathematics</h3>
+
+                    <p>
+                        Logical thinking, problem solving, formulas,
+                        calculations and practical mathematics.
+                    </p>
+
                 </div>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <strong>Address</strong>
-                        Itahari, Sunsari, Nepal
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone</strong>
-                        <a href="tel:+9779842079469">+977 9842079469</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>WhatsApp</strong>
-                        <a href="https://wa.me/9779842079469" target="_blank" rel="noopener noreferrer">+977 9842079469</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Email</strong>
-                        <a href="mailto:newitahari@gmail.com">newitahari@gmail.com</a>
-                    </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-icon">🔬</div>
+
+                    <h3>Science</h3>
+
+                    <p>
+                        Concept-based learning using experiments,
+                        examples and everyday observations.
+                    </p>
+
                 </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-icon">📖</div>
+
+                    <h3>English</h3>
+
+                    <p>
+                        Grammar, vocabulary, communication,
+                        reading, writing and comprehension.
+                    </p>
+
+                </div>
+
             </div>
-        </section>
-    </main>
 
-    <a class="whatsapp-float" href="https://wa.me/9779842079469" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">✆</a>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Teaching Experience</h2>
+
+                <p>
+                    Experience built through years of classroom teaching.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        10 Years of Teaching Practice
+                    </div>
+
+                    <h3>Secondary Level Teacher</h3>
+
+                    <p>
+                        Teaching Mathematics, Science and English while
+                        supporting students with different learning abilities
+                        and encouraging active classroom participation.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        Classroom Development
+                    </div>
+
+                    <h3>Student-Centered Learning</h3>
+
+                    <p>
+                        Using simple explanations, practical examples,
+                        classroom activities, questioning techniques and
+                        continuous feedback to improve student understanding.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        Professional Growth
+                    </div>
+
+                    <h3>Continuous Learning</h3>
+
+                    <p>
+                        Continuously developing teaching skills and using
+                        digital tools and modern educational resources to
+                        improve classroom learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TEACHING METHODS
+    ========================== -->
+
+    <section id="methods" class="subjects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My Teaching Methods</h2>
+
+                <p>
+                    Simple methods that help students understand and remember.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">💡</div>
+
+                    <h3>Simple Explanation</h3>
+
+                    <p>
+                        Breaking complex topics into small, clear and
+                        understandable concepts.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🧪</div>
+
+                    <h3>Practical Learning</h3>
+
+                    <p>
+                        Connecting classroom concepts with experiments,
+                        activities and real-life examples.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🙋</div>
+
+                    <h3>Student Participation</h3>
+
+                    <p>
+                        Encouraging students to ask questions, participate
+                        in discussions and share their ideas.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🧩</div>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        Helping students develop logical thinking and
+                        independent problem-solving skills.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🎯</div>
+
+                    <h3>Individual Attention</h3>
+
+                    <p>
+                        Supporting students according to their individual
+                        learning needs and abilities.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">💻</div>
+
+                    <h3>Digital Learning</h3>
+
+                    <p>
+                        Using computers, presentations, online resources
+                        and digital tools to make lessons engaging.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACHIEVEMENTS
+    ========================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Special Achievements</h2>
+
+                <p>
+                    Highlights of my professional journey.
+                </p>
+
+            </div>
+
+
+            <div class="achievement-list">
+
+                <div class="achievement">
+
+                    <div class="achievement-icon">🏆</div>
+
+                    <div>
+                        <strong>10 Years of Teaching Experience</strong>
+
+                        <p>
+                            Dedicated service in secondary-level education
+                            and student development.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="achievement">
+
+                    <div class="achievement-icon">🌱</div>
+
+                    <div>
+                        <strong>Student Confidence Building</strong>
+
+                        <p>
+                            Focused on developing students' confidence,
+                            communication and problem-solving abilities.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="achievement">
+
+                    <div class="achievement-icon">💻</div>
+
+                    <div>
+                        <strong>Technology in Education</strong>
+
+                        <p>
+                            Integrating computers, digital resources,
+                            presentations and modern learning tools.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TRAINING & CERTIFICATES
+    ========================== -->
+
+    <section class="subjects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Training & Professional Development</h2>
+
+                <p>
+                    Continuing to improve my teaching and technology skills.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">🎓</div>
+
+                    <h3>Teaching Training</h3>
+
+                    <p>
+                        Professional development and classroom teaching
+                        training focused on effective learning.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">💻</div>
+
+                    <h3>Computer Training</h3>
+
+                    <p>
+                        Developing practical skills in Microsoft Office,
+                        digital tools and educational technology.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🤖</div>
+
+                    <h3>AI & Digital Tools</h3>
+
+                    <p>
+                        Exploring modern AI and digital tools to support
+                        teaching, learning and educational content creation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Computer & Technology Skills</h2>
+
+                <p>
+                    Digital skills that support modern teaching.
+                </p>
+
+            </div>
+
+
+            <div class="skills">
+
+                <div class="skill">Microsoft Word</div>
+
+                <div class="skill">Microsoft Excel</div>
+
+                <div class="skill">Microsoft PowerPoint</div>
+
+                <div class="skill">Canva</div>
+
+                <div class="skill">Basic Photoshop</div>
+
+                <div class="skill">AI Tools</div>
+
+                <div class="skill">Internet & Web Research</div>
+
+                <div class="skill">Digital Presentations</div>
+
+                <div class="skill">Online Learning Resources</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LANGUAGES
+    ========================== -->
+
+    <section class="subjects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Languages</h2>
+
+                <p>
+                    Communication skills for effective teaching.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>English</h3>
+
+                    <p>
+                        Teaching and professional communication.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Nepali</h3>
+
+                    <p>
+                        Native communication and classroom interaction.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Hindi</h3>
+
+                    <p>
+                        Comfortable communication and understanding.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Let's Connect</h2>
+
+                <p>
+                    Thank you for visiting Mohan Sir's teaching portfolio.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <div class="icon">👨‍🏫</div>
+
+                    <h3>Mohan Sir</h3>
+
+                    <p>
+                        Secondary Level Teacher
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="icon">📍</div>
+
+                    <h3>Location</h3>
+
+                    <p>
+                        Nepal
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="icon">📚</div>
+
+                    <h3>Subjects</h3>
+
+                    <p>
+                        Mathematics • Science • English
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
-        © 2026 Mohan Sir Portfolio | All Rights Reserved
+
+        <p>
+            © 2026 <strong>Mohan Sir</strong> — Teacher Portfolio
+        </p>
+
+        <p>
+            Shaping confident minds with clear teaching.
+        </p>
+
     </footer>
+
+
 </body>
 </html>
