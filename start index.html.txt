@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohan Sir Portfolio</title>
+    <meta name="description" content="Professional portfolio of Mohan Sir, a Mathematics, Science and English teacher from Itahari, Nepal.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-1: #0f172a;
+            --bg-2: #111827;
+            --panel: rgba(15, 23, 42, 0.76);
+            --panel-soft: rgba(255,255,255,0.06);
+            --card: #f8fafc;
+            --card-2: #ecfeff;
+            --text: #e2e8f0;
+            --muted: #a5b4cf;
+            --primary: #2dd4bf;
+            --primary-2: #38bdf8;
+            --secondary: #f59e0b;
+            --accent: #fb7185;
+            --line: rgba(148, 163, 184, 0.25);
+            --shadow: rgba(2, 6, 23, 0.3);
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #111827 35%, #082f49 100%);
+            color: var(--text);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: #7dd3fc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-inner a {
+            color: #e2e8f0;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-inner a:hover {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(8, 47, 73, 0.9));
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            box-shadow: 0 25px 60px var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+        }
+
+        .hero-content {
+            padding: 48px 42px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(45, 212, 191, 0.12);
+            border: 1px solid rgba(45, 212, 191, 0.22);
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+        h1 {
+            margin: 18px 0 14px;
+            font-size: clamp(2.6rem, 5vw, 4.5rem);
+            line-height: 1.06;
+            letter-spacing: -0.04em;
+            color: #f8fafc;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #67e8f9, #2dd4bf, #fbbf24);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.08rem;
+            color: var(--muted);
+            max-width: 620px;
+            line-height: 1.7;
+            margin: 0 0 26px;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 14px 22px;
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta:hover {
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        .cta.primary {
+            background: linear-gradient(90deg, var(--primary), var(--primary-2));
+            color: #06212d;
+            box-shadow: 0 18px 28px rgba(45, 212, 191, 0.22);
+        }
+
+        .cta.secondary {
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            color: white;
+            box-shadow: 0 18px 28px rgba(34, 197, 94, 0.2);
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .meta-item {
+            min-width: 140px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 12px 14px;
+        }
+
+        .meta-label {
+            color: var(--muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .meta-value {
+            margin-top: 6px;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 100%;
+            background: radial-gradient(circle at top right, rgba(45, 212, 191, 0.18), transparent 35%), linear-gradient(180deg, rgba(15,23,42,0.2), rgba(15,23,42,0.6));
+            padding: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-frame {
+            width: min(100%, 420px);
+            border-radius: 28px;
+            padding: 14px;
+            background: linear-gradient(135deg, rgba(45,212,191,0.25), rgba(56,189,248,0.1));
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px rgba(2, 6, 23, 0.35);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 22px;
+            border: 2px solid rgba(255,255,255,0.12);
+            background: #dbeafe;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 28px 20px;
+        }
+
+        .section-panel {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: 0 16px 32px rgba(2, 6, 23, 0.2);
+            padding: 28px 30px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .section-title {
+            margin: 0;
+            font-size: clamp(1.7rem, 3vw, 2.5rem);
+            color: #f8fafc;
+        }
+
+        .section-kicker {
+            font-size: 0.76rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .info-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: #f8fafc;
+            font-size: 1.1rem;
+        }
+
+        .info-card p,
+        .info-card li {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            background: rgba(15, 23, 42, 0.25);
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        th, td {
+            border: 1px solid var(--line);
+            padding: 12px 14px;
+            text-align: left;
+            color: var(--text);
+        }
+
+        th {
+            background: rgba(45, 212, 191, 0.1);
+            color: var(--primary);
+        }
+
+        .stat-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 16px;
+        }
+
+        .stat-box strong {
+            display: block;
+            font-size: 1.6rem;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .stat-box span {
+            color: var(--muted);
+        }
+
+        .youtube-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(45, 212, 191, 0.5);
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            background: #172554;
+        }
+
+        .video-body {
+            padding: 16px 14px 18px;
+        }
+
+        .video-body h4 {
+            margin: 0 0 10px;
+            color: #f8fafc;
+            font-size: 1.02rem;
+        }
+
+        .video-body a {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 20px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 6px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 18px 30px rgba(34, 197, 94, 0.35);
+            z-index: 2000;
+        }
+
+        .whatsapp-float:hover {
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid,
+            .content-grid,
+            .contact-grid,
+            .youtube-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-content {
+                padding: 28px 22px;
+            }
+
+            .section-panel {
+                padding: 22px 18px;
+            }
+
+            .nav-inner {
+                gap: 10px 14px;
+            }
+
+            .meta-item {
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="#profile">Profile</a>
+            <a href="#objective">Objective</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#languages">Languages</a>
+            <a href="#strengths">Strengths</a>
+            <a href="#youtube">YouTube</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="profile">
+        <div class="hero-card">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">Mathematics • Science • English</span>
+                    <h1>Shaping confident minds with <span class="gradient-text">clear teaching</span>.</h1>
+                    <p class="hero-sub">
+                        Dedicated and experienced secondary teacher with 10 years of teaching practice, helping students build confidence in mathematics, science, and English through simple, practical, and student-friendly learning methods.
+                    </p>
+
+                    <div class="cta-row">
+                        <a class="cta primary" href="https://wa.me/9779842079469" target="_blank" rel="noopener noreferrer">WhatsApp Now</a>
+                        <a class="cta secondary" href="mailto:newitahari@gmail.com">Email Me</a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Experience</div>
+                            <div class="meta-value">10 Years</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Specialty</div>
+                            <div class="meta-value">Classes 8–10</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Location</div>
+                            <div class="meta-value">Itahari</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="photo-frame">
+                        <img src="Mohan.jpg" alt="Mohan Sir" class="profile-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="objective">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Career Goal</span>
+                    <h2 class="section-title">Career Objective</h2>
+                </div>
+                <div class="info-card">
+                    <p>To work as a dedicated <strong>Secondary Teacher</strong> in Mathematics, Science, and English, where I can apply my teaching experience, subject knowledge, communication skills, and modern classroom methods to help students achieve academic excellence and personal growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Professional Journey</span>
+                    <h2 class="section-title">Teaching Experience</h2>
+                </div>
+
+                <div class="content-grid">
+                    <div class="info-card">
+                        <h3>Hamro Godawari Boarding School</h3>
+                        <p><strong>Position:</strong> Secondary-Level Teacher</p>
+                        <p><strong>Experience:</strong> 10 years</p>
+                        <p><strong>Subjects:</strong> Mathematics and Science</p>
+                        <p><strong>Classes:</strong> 8, 9 and 10</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Key Responsibilities</h3>
+                        <ul>
+                            <li>Prepare lesson plans, assignments, and classroom tests</li>
+                            <li>Clarify difficult concepts using simple explanations</li>
+                            <li>Support students with remedial teaching and guidance</li>
+                            <li>Maintain discipline and motivate learners</li>
+                            <li>Prepare students for SEE and competitive examinations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="achievements">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Highlights</span>
+                    <h2 class="section-title">Achievements</h2>
+                </div>
+                <div class="stat-list">
+                    <div class="stat-box">
+                        <strong>10+</strong>
+                        <span>Years of teaching</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>8–10</strong>
+                        <span>Classes taught</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>SEE</strong>
+                        <span>Exam guidance</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>100%</strong>
+                        <span>Student-focused teaching</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Academic Background</span>
+                    <h2 class="section-title">Education & Training</h2>
+                </div>
+                <div class="info-card">
+                    <p><strong>Bachelor's Degree:</strong> English and Rural Development, Tribhuvan University</p>
+                    <p><strong>Training:</strong> Basic Computer Application, MS Word, Excel, PowerPoint, Stress Management</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Competencies</span>
+                    <h2 class="section-title">Skills</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="info-card">
+                        <h3>Computer Skills</h3>
+                        <ul>
+                            <li>Microsoft Word, Excel, PowerPoint</li>
+                            <li>Canva</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Internet and digital teaching tools</li>
+                            <li>AI-powered learning support</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Teaching Approach</h3>
+                        <ul>
+                            <li>Concept-based learning</li>
+                            <li>Simple, practical explanations</li>
+                            <li>Student motivation and mentoring</li>
+                            <li>Classroom management</li>
+                            <li>Exam preparation and revision strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="languages">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Communication</span>
+                    <h2 class="section-title">Language Skills</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th>Proficiency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Nepali</td><td>Native / Fluent</td></tr>
+                        <tr><td>English</td><td>Professional / Fluent</td></tr>
+                        <tr><td>Hindi</td><td>Conversational / Fluent</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section" id="strengths">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Why Students Learn</span>
+                    <h2 class="section-title">Professional Strengths</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="info-card">
+                        <ul>
+                            <li>Strong communication and classroom engagement</li>
+                            <li>Quick problem-solving and mathematical reasoning</li>
+                            <li>Ability to simplify difficult topics</li>
+                            <li>Positive student mentoring and feedback</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <ul>
+                            <li>Effective classroom discipline</li>
+                            <li>Result-oriented teaching</li>
+                            <li>Confidence building for students</li>
+                            <li>Focus on conceptual understanding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="youtube">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Digital Learning</span>
+                    <h2 class="section-title">Teaching Videos</h2>
+                </div>
+                <p style="color: var(--muted); margin-bottom: 20px; line-height: 1.8;">
+                    Explore lesson explanations, concept learning, revision content, and subject guidance through my teaching videos. The official channel is available below and can be updated anytime with new educational videos.
+                </p>
+                <p><strong>Channel:</strong> <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">@chhatrakhadka2702</a></p>
+
+                <div class="youtube-grid">
+                    <div class="video-card">
+                        <img src="https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg" alt="Mathematics lesson 1">
+                        <div class="video-body">
+                            <h4>Mathematics Lesson 1</h4>
+                            <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">Open Video Channel</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg" alt="Science lesson 2">
+                        <div class="video-body">
+                            <h4>Science Explanation</h4>
+                            <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">Open Video Channel</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="Exam preparation tips">
+                        <div class="video-body">
+                            <h4>Exam Preparation Tips</h4>
+                            <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" rel="noopener noreferrer">Open Video Channel</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: var(--muted); margin-top: 16px; font-style: italic;">Replace VIDEO_ID_1, VIDEO_ID_2, and VIDEO_ID_3 with actual YouTube IDs when you add each lesson manually.</p>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="section-panel">
+                <div class="section-heading">
+                    <span class="section-kicker">Contact</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <strong>Address</strong>
+                        Itahari, Sunsari, Nepal
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <a href="tel:+9779842079469">+977 9842079469</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>WhatsApp</strong>
+                        <a href="https://wa.me/9779842079469" target="_blank" rel="noopener noreferrer">+977 9842079469</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:newitahari@gmail.com">newitahari@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a class="whatsapp-float" href="https://wa.me/9779842079469" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">✆</a>
+
+    <footer>
+        © 2026 Mohan Sir Portfolio | All Rights Reserved
+    </footer>
+</body>
+</html>
