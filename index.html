@@ -1,218 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mohan Sir Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            background: linear-gradient(to right, #74ebd5, #ACB6E5);
-            color: #2c3e50;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            text-align: center;
-            color: #ff5733; /* Bright orange for main heading */
-            animation: fadeInDown 2s ease-in-out;
-        }
-        h2 {
-            text-align: center;
-            color: #1abc9c;
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-        h3 {
-            text-align: center;
-            color: #2980b9; /* Blue accent */
-        }
-        .section {
-            background: rgba(255, 255, 255, 0.9);
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 800px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            line-height: 1.6;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        a {
-            color: #e74c3c; /* Red links */
-            text-decoration: none;
-        }
-        a:hover {
-            color: #16a085;
-            text-decoration: underline;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #1abc9c;
-            color: white;
-        }
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .profile-photo {
-            width: 200px;
-            height: auto;
-            border-radius: 50%;
-            border: 3px solid #1abc9c;
-            box-shadow: 0 0 15px rgba(0,0,0,0.4);
-            animation: zoomIn 2s ease-in-out;
-        }
-        /* Navigation Bar */
-        nav {
-            background: #2c3e50;
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ff5733;
-        }
-        /* Animations */
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-        @keyframes fadeInDown {
-            from {opacity: 0; transform: translateY(-30px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-        @keyframes fadeInUp {
-            from {opacity: 0; transform: translateY(30px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-        @keyframes zoomIn {
-            from {transform: scale(0.8); opacity: 0;}
-            to {transform: scale(1); opacity: 1;}
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohan Sir | Teacher Portfolio</title>
+  <meta name="description" content="Mohan Sir - Experienced secondary teacher specializing in Mathematics, Science and English.">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #163b65, #246b9b);
+      color: #f5f7fb;
+    }
+    nav {
+      background: #0e2946;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: #ffd166;
+      margin: 0 12px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #ffd166;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .profile-card {
+      margin: 40px auto;
+      max-width: 400px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .profile-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .scrolling-wrapper {
+      width: 100%;
+      overflow: hidden;
+      background: rgba(255,255,255,0.1);
+      padding: 12px 0;
+      margin: 30px 0;
+    }
+    .scrolling-track {
+      display: flex;
+      width: max-content;
+      animation: scrollText 25s linear infinite;
+    }
+    .scrolling-track span {
+      font-size: 18px;
+      font-weight: bold;
+      white-space: nowrap;
+      padding-right: 100px;
+      color: #ffd166;
+    }
+    @keyframes scrollText {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      color: #ffd166;
+      margin-bottom: 20px;
+    }
+    .section p {
+      max-width: 700px;
+      margin: auto;
+      color: #f5f7fb;
+    }
+    footer {
+      background: #0e2946;
+      padding: 20px;
+      text-align: center;
+      color: #f5f7fb;
+    }
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#profile">Profile</a>
-        <a href="#objective">Objective</a>
-        <a href="#experience">Experience</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#languages">Languages</a>
-        <a href="#strengths">Strengths</a>
-        <a href="#youtube">YouTube</a>
-        <a href="#references">References</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- Profile Photo Section -->
-    <div style="text-align:center; margin:30px 0;">
-        <img src="Mohan.jpg" alt="Mohan Sir" class="profile-photo">
-        <h1>MOHAN SIR</h1>
-        <h3>Mathematics | Science | English Teacher</h3>
-        <p><strong>Location:</strong> Itahari, Sunsari, Nepal</p>
-        <p><strong>Phone:</strong> +977 9842079469</p>
-        <p><strong>Email:</strong> <a href="mailto:newitahari@gmail.com">newitahari@gmail.com</a></p>
-        <p><strong>Nationality:</strong> Nepali | <strong>Gender:</strong> Male</p>
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h1>Welcome to Mohan Sir's Portfolio</h1>
+    <p>Shaping confident minds with clear teaching in Mathematics, Science, and English.</p>
+  </section>
+
+  <!-- Profile -->
+  <div class="profile-card">
+    <!-- ✅ Corrected image path -->
+    <img src="/Mohan.jpg" alt="Mohan Sir - Teacher">
+  </div>
+
+  <!-- Scrolling Text -->
+  <div class="scrolling-wrapper">
+    <div class="scrolling-track">
+      <span>👨‍🏫 10+ Years of Teaching Experience</span>
+      <span>📚 Mathematics • Science • English</span>
+      <span>💡 Simple • Practical • Student-Friendly Learning</span>
+      <span>🎯 Confidence Building • Exam Preparation</span>
+      <span>🌐 Digital Learning • Modern Tools</span>
     </div>
+  </div>
 
-    <!-- Professional Profile -->
-    <div class="section" id="profile">
-        <h2>Professional Profile</h2>
-        <p>Dedicated and experienced secondary-level teacher with <strong>10 years of teaching experience</strong> at Hamro Godawari Boarding School, specializing in <strong>Mathematics and Science for Classes 8, 9 and 10</strong>. Skilled in explaining difficult concepts through simple, practical and student-friendly approaches.</p>
-    </div>
+  <!-- YouTube Section -->
+  <section class="section" id="youtube">
+    <h2>📺 My YouTube Channel</h2>
+    <p>Explore lesson explanations, concept learning, and exam preparation tips on my channel.</p>
+    <p><a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" style="color:#ffd166; font-weight:bold;">Visit My YouTube Channel</a></p>
+  </section>
 
-    <!-- Career Objective -->
-    <div class="section" id="objective">
-        <h2>Career Objective</h2>
-        <p>To work as a dedicated <strong>Secondary Teacher</strong> (Mathematics, Science, English), where I can use my teaching experience, subject knowledge, problem-solving skills and modern teaching techniques to support students' academic and personal development.</p>
-    </div>
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2>📞 Contact Me</h2>
+    <p>Email: <a href="mailto:newitahari@gmail.com" style="color:#ffd166;">newitahari@gmail.com</a></p>
+    <p>Phone: <a href="tel:+9779842079469" style="color:#ffd166;">+977 9842079469</a></p>
+    <p>WhatsApp: <a href="https://wa.me/9779842079469" target="_blank" style="color:#ffd166;">Chat on WhatsApp</a></p>
+  </section>
 
-    <!-- Teaching Experience -->
-    <div class="section" id="experience">
-        <h2>Teaching Experience</h2>
-        <h3>Hamro Godawari Boarding School</h3>
-        <p><strong>Position:</strong> Secondary-Level Teacher | <strong>Experience:</strong> 10 Years</p>
-        <p><strong>Subjects:</strong> Mathematics and Science | <strong>Classes:</strong> 8, 9 and 10</p>
-        <h3>Key Responsibilities</h3>
-        <ul>
-            <li>Prepare daily and weekly lesson plans</li>
-            <li>Explain difficult concepts in simple ways</li>
-            <li>Prepare assignments, homework, and examinations</li>
-            <li>Conduct tests and evaluate students’ progress</li>
-            <li>Provide remedial support to students</li>
-            <li>Maintain classroom discipline</li>
-            <li>Prepare students for SEE and competitive exams</li>
-        </ul>
-    </div>
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float" href="https://wa.me/9779842079469" target="_blank" aria-label="Chat on WhatsApp">✆</a>
 
-    <!-- Achievements -->
-    <div class="section" id="achievements">
-        <h2>Special Achievements</h2>
-        <ul>
-            <li>Taught Mathematics and Science for 10 years</li>
-            <li>Strengthened students’ problem-solving and analytical skills</li>
-            <li>Guided students for SEE exams</li>
-            <li>Developed simplified teaching methods</li>
-        </ul>
-    </div>
+  <!-- Footer -->
+  <footer>
+    © 2026 Mohan Sir Portfolio | All Rights Reserved
+  </footer>
 
-    <!-- Education -->
-    <div class="section" id="education">
-        <h2>Education & Professional Development</h2>
-        <p><strong>Bachelor's Degree:</strong> English and Rural Development, Tribhuvan University</p>
-        <p><strong>Training:</strong> Basic Computer Application, MS Word, Excel, PowerPoint, Stress Management</p>
-    </div>
-
-    <!-- Skills -->
-    <div class="section" id="skills">
-        <h2>Computer & Technology Skills</h2>
-        <ul>
-            <li>Microsoft Word, Excel, PowerPoint</li>
-            <li>Canva, Adobe Photoshop</li>
-            <li>AI-powered teaching tools</li>
-            <li>Internet & Digital Classroom Tools</li>
-        </ul>
-    </div>
-
-    <!-- Languages -->
-    <div class="section" id="languages">
-        <h2>Language Skills</h2>
-        <table>
-            <tr><th>Language</th><th>Proficiency</th></tr>
-            <tr><td>Nepali</td><td>Native / Fluent</td></tr>
-            <tr><td>English</td><td>Professional / Fluent</td></tr>
-            <tr><td>Hindi</td><td>Conversational / Fluent</td></tr>
-        </table>
-    </div>
-
-    <!-- Strengths -->
-    <div class="section" id="strengths">
-        <h2>Professional Strengths</h2>
-        <ul>
-            <li>Strong communication skills</li>
-            <li>Mathematical reasoning & fast calculation</li>
+</body>
+</html>
