@@ -3,62 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohan Sir | Teacher Portfolio</title>
-  <meta name="description" content="Mohan Sir - Experienced secondary teacher specializing in Mathematics, Science and English.">
-
+  <title>Mohan Sir Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #163b65, #246b9b);
-      color: #f5f7fb;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      color: #2c3e50;
     }
     nav {
-      background: #0e2946;
-      padding: 15px;
+      background: #2c3e50;
+      padding: 12px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
-      color: #ffd166;
-      margin: 0 12px;
-      font-weight: bold;
+      color: white;
+      margin: 0 15px;
+      font-weight: 600;
       text-decoration: none;
     }
-    nav a:hover {
-      color: #ffffff;
+    nav a:hover { color: #1abc9c; }
+    h1, h2, h3 { text-align: center; color: #1abc9c; }
+    .section {
+      background: rgba(255,255,255,0.95);
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      line-height: 1.7;
     }
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-      color: #ffd166;
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-    }
-    .profile-card {
-      margin: 40px auto;
-      max-width: 400px;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    }
-    .profile-card img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .profile-photo {
+      width: 200px;
+      border-radius: 50%;
+      border: 4px solid #1abc9c;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
     .scrolling-wrapper {
       width: 100%;
       overflow: hidden;
-      background: rgba(255,255,255,0.1);
+      background: #1abc9c;
       padding: 12px 0;
-      margin: 30px 0;
+      margin: 25px 0;
     }
     .scrolling-track {
       display: flex;
@@ -70,30 +60,18 @@
       font-weight: bold;
       white-space: nowrap;
       padding-right: 100px;
-      color: #ffd166;
+      color: white;
     }
     @keyframes scrollText {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .section h2 {
-      color: #ffd166;
-      margin-bottom: 20px;
-    }
-    .section p {
-      max-width: 700px;
-      margin: auto;
-      color: #f5f7fb;
-    }
     footer {
-      background: #0e2946;
-      padding: 20px;
+      background: #2c3e50;
+      color: white;
       text-align: center;
-      color: #f5f7fb;
+      padding: 20px;
+      margin-top: 40px;
     }
     .whatsapp-float {
       position: fixed;
@@ -111,66 +89,107 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       text-decoration: none;
     }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
+    .whatsapp-float:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#youtube">YouTube</a>
+    <a href="#profile">Profile</a>
+    <a href="#experience">Experience</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#languages">Languages</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <h1>Welcome to Mohan Sir's Portfolio</h1>
-    <p>Shaping confident minds with clear teaching in Mathematics, Science, and English.</p>
-  </section>
-
   <!-- Profile -->
-  <div class="profile-card">
-    <!-- ✅ Corrected image path -->
-    <img src="/Mohan.jpg" alt="Mohan Sir - Teacher">
+  <div style="text-align:center; margin:30px 0;">
+    <img src="/Mohan.jpg" alt="Mohan Sir" class="profile-photo">
+    <h1>MOHAN SIR</h1>
+    <h3>Mathematics | Science | English Teacher</h3>
+    <p><strong>Location:</strong> Itahari, Sunsari, Nepal</p>
+    <p><strong>Phone:</strong> +977 9842079469</p>
+    <p><strong>Email:</strong> <a href="mailto:newitahari@gmail.com">newitahari@gmail.com</a></p>
+    <p><strong>Nationality:</strong> Nepali | <strong>Gender:</strong> Male</p>
   </div>
 
-  <!-- Scrolling Text -->
+  <!-- Scrolling Highlights -->
   <div class="scrolling-wrapper">
     <div class="scrolling-track">
-      <span>👨‍🏫 10+ Years of Teaching Experience</span>
-      <span>📚 Mathematics • Science • English</span>
+      <span>👨‍🏫 12 Years Teaching at Hamro Godawari School</span>
+      <span>📚 4 Years Freelance Tuition (Math, Science, English)</span>
       <span>💡 Simple • Practical • Student-Friendly Learning</span>
       <span>🎯 Confidence Building • Exam Preparation</span>
       <span>🌐 Digital Learning • Modern Tools</span>
     </div>
   </div>
 
-  <!-- YouTube Section -->
-  <section class="section" id="youtube">
-    <h2>📺 My YouTube Channel</h2>
-    <p>Explore lesson explanations, concept learning, and exam preparation tips on my channel.</p>
-    <p><a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank" style="color:#ffd166; font-weight:bold;">Visit My YouTube Channel</a></p>
-  </section>
+  <!-- Professional Profile -->
+  <div class="section" id="profile">
+    <h2>Professional Profile</h2>
+    <p>Dedicated and experienced secondary-level teacher with <strong>12 years of teaching experience</strong> at Hamro Godawari Boarding School, specializing in <strong>Mathematics and Science for Classes 8, 9 and 10</strong>. Additionally, I have <strong>4 years of freelance tuition teaching</strong> in Mathematics, Science, and English. Skilled in explaining difficult concepts through simple, practical and student-friendly approaches.</p>
+  </div>
 
-  <!-- Contact Section -->
-  <section class="section" id="contact">
-    <h2>📞 Contact Me</h2>
-    <p>Email: <a href="mailto:newitahari@gmail.com" style="color:#ffd166;">newitahari@gmail.com</a></p>
-    <p>Phone: <a href="tel:+9779842079469" style="color:#ffd166;">+977 9842079469</a></p>
-    <p>WhatsApp: <a href="https://wa.me/9779842079469" target="_blank" style="color:#ffd166;">Chat on WhatsApp</a></p>
-  </section>
+  <!-- Experience -->
+  <div class="section" id="experience">
+    <h2>Teaching Experience</h2>
+    <h3>Hamro Godawari Boarding School</h3>
+    <p><strong>Position:</strong> Secondary-Level Teacher | <strong>Experience:</strong> 12 Years</p>
+    <p><strong>Subjects:</strong> Mathematics and Science | <strong>Classes:</strong> 8, 9 and 10</p>
+    <h3>Freelance Tuition Teaching</h3>
+    <p><strong>Subjects:</strong> Mathematics, Science, English | <strong>Experience:</strong> 4 Years</p>
+  </div>
 
-  <!-- WhatsApp Floating Button -->
-  <a class="whatsapp-float" href="https://wa.me/9779842079469" target="_blank" aria-label="Chat on WhatsApp">✆</a>
+  <!-- Achievements -->
+  <div class="section" id="achievements">
+    <h2>Special Achievements</h2>
+    <ul>
+      <li>Taught Mathematics and Science for 12 years at school</li>
+      <li>Provided 4 years of freelance tuition teaching</li>
+      <li>Strengthened students’ problem-solving and analytical skills</li>
+      <li>Guided students for SEE exams</li>
+      <li>Developed simplified teaching methods</li>
+    </ul>
+  </div>
 
-  <!-- Footer -->
-  <footer>
-    © 2026 Mohan Sir Portfolio | All Rights Reserved
-  </footer>
+  <!-- Education -->
+  <div class="section" id="education">
+    <h2>Education & Professional Development</h2>
+    <p><strong>Bachelor's Degree:</strong> English and Rural Development, Tribhuvan University</p>
+    <p><strong>Training:</strong> Basic Computer Application, MS Word, Excel, PowerPoint, Stress Management</p>
+  </div>
 
-</body>
-</html>
+  <!-- Skills -->
+  <div class="section" id="skills">
+    <h2>Computer & Technology Skills</h2>
+    <ul>
+      <li>Microsoft Word, Excel, PowerPoint</li>
+      <li>Canva, Adobe Photoshop</li>
+      <li>AI-powered teaching tools</li>
+      <li>Internet & Digital Classroom Tools</li>
+    </ul>
+  </div>
+
+  <!-- Languages -->
+  <div class="section" id="languages">
+    <h2>Language Skills</h2>
+    <table>
+      <tr><th>Language</th><th>Proficiency</th></tr>
+      <tr><td>Nepali</td><td>Native / Fluent</td></tr>
+      <tr><td>English</td><td>Professional / Fluent</td></tr>
+      <tr><td>Hindi</td><td>Conversational / Fluent</td></tr>
+    </table>
+  </div>
+
+  <!-- Contact -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p><strong>Mohan Sir</strong><br>
+    Mathematics | Science | English Teacher<br>
+    Itahari, Sunsari, Nepal<br>
+    Phone: +977 9842079469<br>
+    Email: <a href="mailto:newitahari@gmail.com">newitahari@gmail.com</a><br>
+    YouTube: <a href="https://www.youtube.com/@chhatrakhadka2702" target="_blank">Visit My
