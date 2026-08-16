@@ -10,7 +10,7 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #2c3e50;
+      color: #f1f1f1;
     }
     nav {
       background: #0f2027;
@@ -36,6 +36,7 @@
       max-width: 950px;
       box-shadow: 0 0 15px rgba(0,0,0,0.15);
       line-height: 1.7;
+      color: #2c3e50;
     }
     .profile-photo {
       width: 200px;
@@ -43,6 +44,19 @@
       border: 4px solid #ffd166;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
+    .contact-info {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .contact-info strong {
+      color: #203a43;
+    }
+    .contact-info a {
+      color: #e67e22;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-info a:hover { text-decoration: underline; }
     .scrolling-wrapper {
       width: 100%;
       overflow: hidden;
@@ -110,9 +124,11 @@
     <img src="/Mohan.jpg" alt="Mohan Sir" class="profile-photo">
     <h1>MOHAN SIR</h1>
     <h3>Mathematics | Science | English Teacher</h3>
-    <p><strong>Location:</strong> Itahari, Sunsari, Nepal</p>
-    <p><strong>Phone:</strong> +977 9842079469</p>
-    <p><strong>Email:</strong> <a href="mailto:newitahari@gmail.com">newitahari@gmail.com</a></p>
+    <div class="contact-info">
+      <p><strong>Location:</strong> Itahari, Sunsari, Nepal</p>
+      <p><strong>Phone:</strong> <a href="tel:+9779842079469">+977 9842079469</a></p>
+      <p><strong>Email:</strong> <a href="mailto:newitahari@gmail.com">newitahari@gmail.com</a></p>
+    </div>
   </div>
 
   <!-- Scrolling Highlights -->
@@ -184,18 +200,4 @@
   <div class="section" id="languages">
     <h2>Language Skills</h2>
     <table>
-      <tr><th>Language</th><th>Proficiency</th></tr>
-      <tr><td>Nepali</td><td>Native / Fluent</td></tr>
-      <tr><td>English</td><td>Professional / Fluent</td></tr>
-      <tr><td>Hindi</td><td>Conversational / Fluent</td></tr>
-    </table>
-  </div>
-
-  <!-- Contact -->
-  <div class="section" id="contact">
-    <h2>Contact</h2>
-    <p><strong>Mohan Sir</strong><br>
-    Mathematics | Science | English Teacher<br>
-    Itahari, Sunsari, Nepal<br>
-    Phone: +977 9842079469<br>
-    Email: <a href="
+      <tr><th>Language</th><th
